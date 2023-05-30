@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial;
+}
+
+.main-header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  background: #131921;
+  color: white;
+  padding: 0 10px;
+}
+
+.right-div {
+  display: flex;
+  width: 180px;
+  height: auto;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.right-div img {
+  width: 100px;
+  height: auto;
+  padding: 10px 6px;
+}
+
+.right-div img:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.middle-div {
+  flex: 1;
+  max-width: 850px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.middle-div input {
+  flex: 1;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  padding: 0 1.5%;
+  font-size: 15px;
+}
+.middle-div div {
+  height: 40px;
+  width: 45px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  outline: none;
+  background: #febd69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-shrink: 0; */
+}
+.middle-div div img {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+}
+
+.left-div {
+  width: 180px;
+  /* flex-shrink: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.left-div .div1 {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.left-div .div1:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.div2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-count {
+  position: absolute;
+  top: 3px;
+  right: 45px;
+  background: transparent;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  width: 26px;
+}
+
+.left-div .div2:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.span1 {
+  display: block;
+  font-size: 13px;
+}
+
+.span2 {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+.left-div a img {
+  width: 50px;
+  height: auto;
+}

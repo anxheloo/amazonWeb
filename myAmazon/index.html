@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="products.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <a href="index.html" class="right-div">
+          <img src="\images\amazon-logo-white.png" />
+        </a>
+
+        <div class="middle-div">
+          <input type="text" placeholder="Search" />
+          <div>
+            <img src="\images\icons\search-icon.png" />
+          </div>
+        </div>
+
+        <div class="left-div">
+          <a class="div1" href="#">
+            <span class="span1">Returns</span>
+            <span class="span2">& Orders</span>
+          </a>
+
+          <div class="div2">
+            <a href="#">
+              <img src="\images\icons\cart-icon.png" />
+            </a>
+            <div class="cart-count">3</div>
+            <div class="cart-text">Cart</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="products">
+          <img
+            src="\images\products\athletic-cotton-socks-6-pairs.jpg"
+            class="products-img"
+          />
+
+          <div class="product-info">
+            <div class="product-title">
+              Black and Gray Athletic Cotton Socks - 6 Pairs
+            </div>
+            <div class="ratings">
+              <img src="\images\ratings\rating-45.png" />
+              <div>87</div>
+            </div>
+
+            <div class="price">$10.90</div>
+
+            <div class="quantity-div">
+              <select class="quantity" onclick="changeBorderColor(event)">
+                <option selected="" value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="products">
+          <img
+            src="\images\products\intermediate-composite-basketball.jpg"
+            class="products-img"
+          />
+
+          <div class="product-info">
+            <div class="product-title">Intermediate Size Basketball</div>
+            <div class="ratings">
+              <img src="\images\ratings\rating-40.png" />
+              <div>127</div>
+            </div>
+
+            <div class="price">$20.95</div>
+
+            <div class="quantity-div">
+              <select class="quantity" onclick="changeBorderColor(event)">
+                <option selected="" value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="products">
+          <img
+            src="\images\products\adults-plain-cotton-tshirt-2-pack-teal.jpg"
+            class="products-img"
+          />
+
+          <div class="product-info">
+            <div class="product-title">
+              Black and Gray Athletic Cotton Socks - 6 Pairs
+            </div>
+            <div class="ratings">
+              <img src="\images\ratings\rating-45.png" />
+              <div>56</div>
+            </div>
+
+            <div class="price">$10.90</div>
+
+            <div class="quantity-div">
+              <select class="quantity" onclick="changeBorderColor(event)">
+                <option selected="" value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeBorderColor(event) {
+        var selectElement = event.target;
+        selectElement.style.borderColor = "orange";
+      }
+    </script>
+  </body>
+</html>
