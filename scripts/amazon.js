@@ -73,6 +73,18 @@ allAddToCartButtons.forEach((button) => {
       });
     }
 
+    updateCartNumber();
     console.log(cart);
   });
 });
+
+// UPDATE THE CART NUMBER of PRODUCTS
+function updateCartNumber() {
+  const cartNumber = document.querySelector(".cart-quantity");
+  let cartQuantity = 0;
+
+  cart.forEach((element) => {
+    cartQuantity += element.quantity;
+  });
+  cartNumber.innerHTML = cartQuantity;
+}
