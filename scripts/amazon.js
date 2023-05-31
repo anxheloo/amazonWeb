@@ -29,7 +29,7 @@ products.forEach((element) => {
           )}</div>
 
           <div class="product-quantity-container">
-            <select>
+            <select class="quantity-select">
               <option selected value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -60,16 +60,23 @@ productsGrid.innerHTML = productsHTML;
 
 const allAddToCartButtons = document.querySelectorAll(".add-to-cart-button");
 allAddToCartButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const productId = button.dataset.productId; // this productId gets converted from data-product-id
-    const existingProduct = cart.find((item) => item.productId === productId);
+  button.addEventListener("click", (event) => {
+    const clickedButton = event.target;
+    const productId = clickedButton.dataset.productId;
+    const productContainer = clickedButton.closest(".product-container");
+    const selectedQuantity = parseInt(
+      productContainer.querySelector(".quantity-select").value
+    );
+    const existingProductIndex = cart.findIndex(
+      (item) => item.productId === productId
+    );
 
-    if (existingProduct) {
-      existingProduct.quantity++;
+    if (existingProductIndex !== -1) {
+      cart[existingProductIndex].quantity += selectedQuantity;
     } else {
       cart.push({
         productId: productId,
-        quantity: 1,
+        quantity: selectedQuantity,
       });
     }
 
