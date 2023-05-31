@@ -6,16 +6,24 @@
 }
 
 .main-header {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
   display: flex;
-  height: 60px;
   align-items: center;
   justify-content: space-between;
-  background: #131921;
-  color: white;
-  padding: 0 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
 }
 
 .right-div {
+  width: 180px;
   display: flex;
   width: 180px;
   height: auto;
@@ -24,13 +32,38 @@
   padding-bottom: 10px;
   padding-top: 10px;
 }
-.right-div img {
+
+/*
+ If you have previously set a specific width for .right-div and you want to remove that constraint 
+ when the screen width is below 800 pixels, this rule can be used.
+ */
+@media (max-width: 800px) {
+  .right-div {
+    width: unset;
+  }
+}
+
+.large-logo {
+  /* display: block; */
   width: 100px;
   height: auto;
   padding: 10px 6px;
 }
 
-.right-div img:hover {
+.large-logo:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.small-logo {
+  display: none;
+  width: 42px;
+  height: auto;
+  padding: 10px 6px;
+}
+
+.small-logo:hover {
   border: 1px solid white;
   border-radius: 3px;
   cursor: pointer;
@@ -39,17 +72,19 @@
 .middle-div {
   flex: 1;
   max-width: 850px;
-  align-items: center;
-  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
 }
+
 .middle-div input {
   flex: 1;
+  width: 0;
   height: 40px;
   border-radius: 5px 0 0 5px;
   border: none;
   outline: none;
-  padding: 0 1.5%;
+  padding-left: 15px;
   font-size: 15px;
 }
 .middle-div div {
@@ -62,7 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
 }
 .middle-div div img {
   width: 20px;
@@ -72,13 +107,13 @@
 
 .left-div {
   width: 180px;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: end;
 }
+
 .left-div .div1 {
-  display: inline-block;
   padding: 8px;
   border-radius: 2px;
   text-decoration: none;
@@ -139,4 +174,33 @@
 .left-div a img {
   width: 50px;
   height: auto;
+}
+
+@media (max-width: 600px) {
+  /* .span1 {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .span2 {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .left-div .div1 {
+    white-space: nowrap;
+    padding: 3px;
+  } */
+
+  /* .middle-div input {
+    max-width: 100px;
+  } */
+
+  .small-logo {
+    display: block;
+  }
+
+  .large-logo {
+    display: none;
+  }
 }
